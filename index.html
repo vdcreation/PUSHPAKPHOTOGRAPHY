@@ -1,28 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pushpak Photography & Cinematography</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Pushpak Photography & Cinematography – Professional wedding, event, portrait and cinematic video services." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', 'Poppins', Arial, sans-serif; }
+    body { background: #0a0a0a; color: #eaeaea; line-height: 1.65; }
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10,10,10,0.9);
+      backdrop-filter: blur(6px);
+      padding: 14px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    nav .logo { font-weight: 600; font-size: 1.1rem; letter-spacing: 0.5px; }
+    nav ul { list-style: none; display: flex; gap: 28px; }
+    nav ul li a { font-size: 0.95rem; opacity: 0.85; }
+    nav ul li a:hover { opacity: 1; color: #f4b400; }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1519741497674-611481863552');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 { font-size: 3rem; font-weight: 600; letter-spacing: 1px; margin-bottom: 12px; }
+    header p { font-size: 1.05rem; max-width: 720px; opacity: 0.85; }
+
+    header a {
+      margin-top: 36px;
+      padding: 16px 44px;
+      background: #f4b400;
+      color: #000;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 40px;
+      letter-spacing: 1px;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    header a:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
+    section { padding: 110px 40px; max-width: 1200px; margin: auto; }
+    section h2 { font-size: 2.1rem; font-weight: 600; margin-bottom: 24px; text-align: center; }
+    section p { text-align: center; max-width: 820px; margin: auto; opacity: 0.85; }
+
+    .services, .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+      margin-top: 56px;
+    }
+
+    .card {
+      background: #121212;
+      padding: 42px 30px;
+      border-radius: 14px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,0.55); }
+
+    .gallery img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      border-radius: 14px;
+      transition: transform 0.35s;
+    }
+
+    .gallery img:hover { transform: scale(1.04); }
+
+    form label { font-size: 0.9rem; opacity: 0.85; }
+
+    form input, form select, form textarea {
+      background: #101010;
+      color: #eaeaea;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    form button {
+      background: #f4b400;
+      color: #000;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .contact p { margin: 10px 0; font-size: 1.05rem; opacity: 0.9; }
+
+    footer {
+      background: #070707;
+      text-align: center;
+      padding: 26px;
+      font-size: 0.85rem;
+      color: #9a9a9a;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25d366;
+      color: #000;
+      padding: 14px 22px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+      z-index: 2000;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      section { padding: 90px 22px; }
+      nav { padding: 14px 22px; }
+    }
+  </style>
 </head>
 <body>
 
-<header class="hero animate">
-  <h1>Pushpak Photography & Cinematography</h1>
-  <p>Capturing stories with cinematic vision</p>
-  <a href="book.html" class="btn">BOOK NOW</a>
-</header>
+  <nav>
+    <div class="logo">Pushpak Photography</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<section class="section animate">
-  <h2>Portfolio</h2>
-  <div class="gallery">
-    <a href="portfolio/wedding.html" class="card">Wedding</a>
-    <a href="portfolio/wedding.html" class="card">Pre-Wedding</a>
-    <a href="portfolio/wedding.html" class="card">Product</a>
-    <a href="portfolio/wedding.html" class="card">Car Delivery</a>
-  </div>
-</section>
+  <header>
+    <h1>Pushpak Photography & Cinematography</h1>
+    <p>Capturing emotions, telling stories, and creating cinematic memories that last forever.</p>
+    <a href="#booking" style="margin-top:30px; display:inline-block; padding:18px 40px; background:#f4b400; color:#000; font-size:1.2rem; font-weight:bold; border-radius:50px;">BOOK NOW</a>
+  </header>
 
-<script src="js/animate.js" defer></script>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Pushpak Photography & Cinematography specializes in professional photography and cinematic videography. 
+      We capture weddings, events, portraits, and special moments with creativity, passion, and precision.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>Professionally crafted visuals with a cinematic approach for every occasion.</p>
+    <div class="services">
+      <div class="card">Wedding Photography</div>
+      <div class="card">Cinematography & Films</div>
+      <div class="card">Pre-Wedding Shoots</div>
+      <div class="card">Event & Corporate Coverage</div>
+      <div class="card">Product Photography</div>
+      <div class="card">Car Delivery & Launch Shoots</div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <p>A glimpse of our professional work style across different categories.</p>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Wedding Photography">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552" alt="Pre Wedding Couple">
+      <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" alt="Cinematic Wedding Shot">
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Product Photography">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="Car Delivery Photography">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Corporate Event Photography">
+    </div>
+  </section>
+
+  <section id="gallery">
+    <section id="gallery">
+    <h2>Our Creative Team</h2>
+    <p>Photography and cinematography brought together under one professional brand.</p>
+    <div class="services" style="margin-top:50px;">
+      <div class="card">
+        <h3 style="margin-bottom:10px;">Photography</h3>
+        <h4 style="margin-bottom:15px; font-weight:500; opacity:0.9;">by Fakira Dahate</h4>
+        <p style="opacity:0.85;">Weddings • Events • Portraits • Products</p>
+        <a href="https://www.instagram.com/fakira_dahate_photography?igsh=aDh3azU1eHJnNnV6" target="_blank" style="display:inline-block;margin-top:22px;padding:12px 30px;background:#f4b400;color:#000;border-radius:30px;font-size:0.9rem;font-weight:600;">View Photography Work</a>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:10px;">Cinematography</h3>
+        <h4 style="margin-bottom:15px; font-weight:500; opacity:0.9;">by VD Cinematography</h4>
+        <p style="opacity:0.85;">Cinematic Films • Reels • Event Stories</p>
+        <a href="https://www.instagram.com/_vedyyaa?igsh=MWt1M245YzY5eDVoZg==" target="_blank" style="display:inline-block;margin-top:22px;padding:12px 30px;background:#f4b400;color:#000;border-radius:30px;font-size:0.9rem;font-weight:600;">View Cinematic Work</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="contact">
+    <h2>Book Your Shoot</h2>
+    <form onsubmit="sendWhatsApp(); return false;" style="max-width:600px;margin:40px auto;text-align:left;">
+      <label>Name</label><br>
+      <input id="name" type="text" placeholder="Your Name" required style="width:100%;padding:12px;margin:8px 0 20px;border-radius:6px;border:none;">
+
+      <label>Phone Number</label><br>
+      <input id="phone" type="tel" placeholder="Your Phone Number" required style="width:100%;padding:12px;margin:8px 0 20px;border-radius:6px;border:none;">
+
+      <label>Date of Shoot</label><br>
+      <input id="date" type="date" required style="width:100%;padding:12px;margin:8px 0 20px;border-radius:6px;border:none;">
+
+      <label>Time</label><br>
+      <input id="time" type="time" style="width:100%;padding:12px;margin:8px 0 20px;border-radius:6px;border:none;">
+
+      <label>Type of Shoot</label><br>
+      <select id="type" style="width:100%;padding:12px;margin:8px 0 20px;border-radius:6px;border:none;">
+        <option>Wedding</option>
+        <option>Pre-Wedding</option>
+        <option>Birthday</option>
+        <option>Product Shoot</option>
+        <option>Car Delivery</option>
+        <option>Corporate Event</option>
+        <option>Portrait / Fashion</option>
+        <option>Other</option>
+      </select>
+
+      <label>More Details</label><br>
+      <textarea id="details" placeholder="Tell us more about your requirement" rows="4" style="width:100%;padding:12px;margin:8px 0 20px;border-radius:6px;border:none;"></textarea>
+
+      <button type="submit" style="width:100%;padding:16px;background:#f4b400;color:#000;font-size:1.15rem;font-weight:bold;border:none;border-radius:50px;cursor:pointer;">BOOK VIA WHATSAPP</button>
+    </form>
+
+    <script>
+      function sendWhatsApp() {
+        var name = document.getElementById('name').value;
+        var phone = document.getElementById('phone').value;
+        var date = document.getElementById('date').value;
+        var time = document.getElementById('time').value;
+        var type = document.getElementById('type').value;
+        var details = document.getElementById('details').value;
+
+        var message = `New Booking Request%0AName: ${name}%0APhone: ${phone}%0ADate: ${date}%0ATime: ${time}%0AShoot Type: ${type}%0ADetails: ${details}`;
+        window.open(`https://wa.me/917709567809?text=${message}`, '_blank');
+      }
+    </script>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> 7709567809 / 9822811754</p>
+    <p><strong>Email:</strong> vdcreation79@gmail.com</p>
+    <p>Book us to capture your special moments beautifully.</p>
+  </section>
+
+  <footer>
+    © 2025 Pushpak Photography & Cinematography. All Rights Reserved.
+  </footer>
+
 </body>
 </html>
